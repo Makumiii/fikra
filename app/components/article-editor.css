@@ -1,0 +1,28 @@
+.article-editor{margin:4px 0 8px;border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden}
+.article-editor-toolbar{display:flex;align-items:center;gap:6px;overflow-x:auto;padding:7px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--surface-soft) 42%,transparent);scrollbar-width:none}
+.article-editor-toolbar::-webkit-scrollbar{display:none}
+.article-editor-group{display:flex;align-items:center;gap:2px;flex:0 0 auto;padding-right:6px;border-right:1px solid var(--line)}
+.article-editor-group:last-child{border-right:0;padding-right:0}
+.article-editor-button{min-width:30px;height:30px;padding:0 7px;display:inline-flex;align-items:center;justify-content:center;gap:2px;border:0;border-radius:7px;background:transparent;color:var(--muted);font-size:11px;font-weight:750;cursor:pointer;transition:color 140ms ease,background-color 140ms ease,transform 140ms cubic-bezier(.23,1,.32,1)}
+.article-editor-button:hover{color:var(--ink);background:var(--surface-soft)}
+.article-editor-button.active{color:var(--accent);background:var(--accent-soft)}
+.article-editor-button:active{transform:scale(.95)}
+.article-editor-button:disabled{opacity:.35;cursor:not-allowed}
+.article-editor-button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.article-editor-text-icon{font:700 14px/1 ui-monospace,SFMono-Regular,Menlo,monospace}
+.article-editor-surface .ProseMirror{min-height:360px;padding:20px 21px;outline:0;font:18px/1.72 ui-serif,Georgia,serif}
+.article-editor-surface .ProseMirror>*:first-child{margin-top:0}
+.article-editor-surface .ProseMirror>*:last-child{margin-bottom:0}
+.article-editor-surface .ProseMirror p.is-editor-empty:first-child:before{content:attr(data-placeholder);float:left;height:0;color:var(--muted);pointer-events:none}
+.article-editor-surface .ProseMirror h2,.article-editor-surface .ProseMirror h3,.article-editor-surface .ProseMirror h4{font-family:var(--font-display);line-height:1.08;letter-spacing:-.02em}
+.article-editor-surface .ProseMirror h2{font-size:30px}
+.article-editor-surface .ProseMirror h3{font-size:24px}
+.article-editor-surface .ProseMirror h4{font-size:20px}
+.article-editor-surface .ProseMirror a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.article-editor-surface .ProseMirror blockquote{margin-left:0;padding-left:17px;border-left:3px solid var(--accent);color:var(--muted)}
+.article-editor-surface .ProseMirror pre{overflow:auto;margin:1.2em 0;padding:14px 16px;border-radius:10px;background:var(--surface-soft);font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace}
+.article-editor-surface .ProseMirror code{padding:2px 5px;border-radius:5px;background:var(--surface-soft);font:.86em ui-monospace,SFMono-Regular,Menlo,monospace}
+.article-editor-surface .ProseMirror pre code{padding:0;background:transparent}
+.article-editor-surface .ProseMirror hr{margin:1.6em 0;border:0;border-top:1px solid var(--line)}
+.article-editor-footer{display:flex;justify-content:space-between;gap:12px;padding:9px 14px;color:var(--muted);font-size:11px;border-top:1px solid var(--line)}
+@media(max-width:640px){.article-editor-surface .ProseMirror{min-height:280px;padding:17px 16px;font-size:17px}.article-editor-footer{flex-wrap:wrap}}

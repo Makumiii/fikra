@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "fikra-local",
+  "main": "./workers/app.ts",
+  "compatibility_date": "2026-08-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "ENVIRONMENT": "development",
+    "SITE_NAME": "Fikra",
+    "SITE_URL": "http://localhost:5173",
+    "EMAIL_TRANSPORT": "outbox"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "fikra-local",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "./migrations"
+    }
+  ],
+  "r2_buckets": [{ "binding": "MEDIA", "bucket_name": "fikra-media-local" }],
+  "queues": {
+    "producers": [{ "binding": "EMAIL_QUEUE", "queue": "fikra-email-local" }],
+    "consumers": [{ "queue": "fikra-email-local", "max_batch_size": 10, "max_batch_timeout": 2, "max_retries": 3, "dead_letter_queue": "fikra-email-dlq-local", "retry_delay": 15 }]
+  },
+  "observability": { "enabled": true },
+  "upload_source_maps": true
+}

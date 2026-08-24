@@ -1,0 +1,11 @@
+ENVIRONMENT=development
+SITE_URL=http://localhost:5173
+EMAIL_TRANSPORT=outbox
+OWNER_EMAIL=owner@example.com
+BETTER_AUTH_SECRET=replace-with-a-long-random-secret
+SMTP_HOST=smtp-relay.brevo.com
+SMTP_PORT=587
+SMTP_USERNAME=replace-me
+SMTP_PASSWORD=replace-me
+SMTP_FROM_EMAIL=hello@example.com
+SMTP_FROM_NAME=Fikra
