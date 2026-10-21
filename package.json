@@ -64,7 +64,7 @@
     "react-email": "^6.9.2",
     "tailwindcss": "^4.2.2",
     "typescript": "^5.9.3",
-    "vite": "^8.0.3",
+    "vite": "^8.3.5",
     "vitest": "^4.1.11",
     "wrangler": "^4.125.0"
   }
