@@ -52,7 +52,7 @@
     "@axe-core/playwright": "^4.13.0",
     "@cloudflare/vite-plugin": "^1.53.1",
     "@cloudflare/vitest-plugin": "^1.0.0",
-    "@react-email/ui": "^6.9.2",
+    "@react-email/ui": "^6.11.5",
     "@react-router/dev": "^8",
     "@tailwindcss/vite": "^4.2.2",
     "@types/node": "^22.20.1",
